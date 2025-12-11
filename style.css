@@ -31,13 +31,12 @@ a {
     width: 100%;
     height: 100vh;
     margin: 0 auto;
-    /* keep gradient but remove dark outer ring to avoid gray bottom */
-    background: linear-gradient(to bottom, #eaf3f6 0%, #f4f8fa 60%, #ffffff 100%);
+    background: linear-gradient(to bottom, #c9dfef 0%, #e9f1f7 50%, #ffffff 100%);
     box-shadow: inset 0 0 0 12px #ffffff, 0 6px 20px rgba(0,0,0,0.06);
     border: none;
     display: flex;
     flex-direction: column;
-    overflow: hidden; /* hide overflowing hero image */
+    overflow: hidden; 
 }
 
 button {
@@ -66,7 +65,7 @@ button:hover {
  */
 
 header {
-    border-radius: 26px; /* outer rounded frame */
+    border-radius: 26px;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -131,9 +130,8 @@ header {
     position: relative;
     display: flex;
     flex-direction: column;
-    /* take remaining space inside the container */
     flex: 1 1 auto;
-    justify-content: space-between; /* top area (hero-text) and bottom area (hero-image) */
+    justify-content: space-between; 
     align-items: center;
     text-align: center;
     padding-bottom: 40px;
@@ -188,7 +186,7 @@ header {
 .hero-image {
     position: relative;
     z-index: 2;
-    align-self: center; /* center horizontally inside container-content */
+    align-self: center; 
     margin-top: 20px;
 }
 
@@ -196,7 +194,7 @@ header {
     position: relative;
     z-index: 2;
     width: 360px;
-    margin: 0 auto 24px; /* sit near the bottom (bottom spacing provided by container-content) */
+    margin: 0 auto 24px; 
     display: block;
     filter: drop-shadow(0 40px 60px rgba(0,0,0,0.25));
     transition: transform 0.25s ease;
@@ -214,16 +212,15 @@ header {
     z-index: 1;
 }
 
-/* bottom row that centers description and video */
 .bottom-row{
     position: absolute;
     left: 50px;
     right: 50px;
-    bottom: 300px; /* moved up to align with hero image */
+    bottom: 300px; 
     display: flex;
     gap: 60px;
     align-items: flex-end;
-    justify-content: space-between; /* spread to edges */
+    justify-content: space-between; 
     width: auto;
     z-index: 3;
 }
@@ -262,7 +259,7 @@ header {
     margin-right: -12px;
     border: 3px solid #ffffff;
     display: block;
-    object-fit: cover; /* prevent stretching, crop if needed */
+    object-fit: cover; 
 }
 
 .description p {
@@ -283,10 +280,9 @@ header {
     box-shadow: none;
     display: block;
     object-fit: cover;
-    object-position: center 60%; /* shift down so face shows */
+    object-position: center 60%; 
 }
 
-/* ghost button text should be black */
 .hero-text button.ghost,
 .nav-links-right a,
 .nav-links-left a{
@@ -294,7 +290,6 @@ header {
 }
 .hero-text button.ghost a{color:#111}
 
-/* ensure anchors inside nav buttons remain white */
 .nav-links-right li button a,
 .nav-links-left li button a{
     color: white;
