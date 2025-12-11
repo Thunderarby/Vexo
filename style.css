@@ -1,0 +1,315 @@
+/* 
+   GOOGLE FONTS
+ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@700;800&display=swap');
+
+/* 
+   GLOBAL
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ffffff;   
+    font-family: 'Inter', sans-serif;
+    color: #111;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.container{
+    position: relative;
+    min-height: 100vh;
+    border-radius: 28px;
+    padding: 0 50px 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    /* keep gradient but remove dark outer ring to avoid gray bottom */
+    background: linear-gradient(to bottom, #eaf3f6 0%, #f4f8fa 60%, #ffffff 100%);
+    box-shadow: inset 0 0 0 12px #ffffff, 0 6px 20px rgba(0,0,0,0.06);
+    border: none;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* hide overflowing hero image */
+}
+
+button {
+    border: none;
+    background: black;
+    color: white;
+    padding: 12px 26px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+button a {
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* 
+   HEADER + NAVIGATION
+ */
+
+header {
+    border-radius: 26px; /* outer rounded frame */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 18px;
+    position: relative;
+}
+
+.nav-links-left,
+.nav-links-right {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    font-size: 13px;
+    font-weight: 400;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.nav-links-left li,
+.nav-links-right li{
+    margin: auto 0;
+}
+
+.nav-links-right li:last-child button{
+    margin-left: 0;
+}
+
+.nav-links-right button {
+    padding: 10px 20px;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 0;
+    z-index: 10;
+}
+
+.logo h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    letter-spacing: 4px;
+    font-size: 28px;
+    margin: 0;
+    background: transparent;
+}
+
+/* 
+   HERO SECTION
+ */
+
+.container-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* take remaining space inside the container */
+    flex: 1 1 auto;
+    justify-content: space-between; /* top area (hero-text) and bottom area (hero-image) */
+    align-items: center;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.hero-text {
+    padding: 40px 20px 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.hero-text h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.05;
+    max-width: 900px;
+    margin: auto;
+    letter-spacing: 1px;
+}
+
+.hero-text span {
+    opacity: 0.7;
+}
+
+.hero-text .btn-row{display:flex;gap:14px;justify-content:center;margin-top:18px}
+.hero-text button {
+    margin: 30px 0;
+    font-size: 14px;
+    border-radius: 24px;
+    padding: 12px 28px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-text button.primary{background:#111;color:#fff}
+.hero-text button.ghost{background:#fff;border:2px solid #eee;color:#111}
+
+/* 
+   HERO MAIN IMAGE
+ */
+
+.hero-image img {
+    width: 360px;
+    margin: 160px auto 0;
+    display: block;
+}
+
+.hero-image {
+    position: relative;
+    z-index: 2;
+    align-self: center; /* center horizontally inside container-content */
+    margin-top: 20px;
+}
+
+.hero-image img {
+    position: relative;
+    z-index: 2;
+    width: 360px;
+    margin: 0 auto 24px; /* sit near the bottom (bottom spacing provided by container-content) */
+    display: block;
+    filter: drop-shadow(0 40px 60px rgba(0,0,0,0.25));
+    transition: transform 0.25s ease;
+}
+
+.hero-image .hero-shadow {
+    position: absolute;
+    left: 50%;
+    bottom: 8%;
+    transform: translateX(-50%);
+    width: 320px;
+    height: 100px;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.28), rgba(0,0,0,0.06) 50%, transparent 70%);
+    filter: blur(12px);
+    z-index: 1;
+}
+
+/* bottom row that centers description and video */
+.bottom-row{
+    position: absolute;
+    left: 50px;
+    right: 50px;
+    bottom: 300px; /* moved up to align with hero image */
+    display: flex;
+    gap: 60px;
+    align-items: flex-end;
+    justify-content: space-between; /* spread to edges */
+    width: auto;
+    z-index: 3;
+}
+
+.hero-desc{
+    position: relative;
+    width: 300px;
+    text-align: left;
+}
+
+.hero-desc .description p{color:#555}
+
+/* 
+   DESCRIPTION SIDEBAR
+ */
+
+.video{
+    position: relative;
+    width: 240px;
+    height: 160px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.images img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: -12px;
+    border: 3px solid #ffffff;
+    display: block;
+    object-fit: cover; /* prevent stretching, crop if needed */
+}
+
+.description p {
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: 300;
+    color: #555;
+}
+
+/* 
+   VIDEO SECTION
+ */
+
+.video video {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+    object-fit: cover;
+    object-position: center 60%; /* shift down so face shows */
+}
+
+/* ghost button text should be black */
+.hero-text button.ghost,
+.nav-links-right a,
+.nav-links-left a{
+    color: #111;
+}
+.hero-text button.ghost a{color:#111}
+
+/* ensure anchors inside nav buttons remain white */
+.nav-links-right li button a,
+.nav-links-left li button a{
+    color: white;
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+    .hero-text h2 {
+        font-size: 32px;
+    }
+    .hero-image img {
+        width: 260px;
+        margin-top: 140px;
+    }
+    .hero-desc, .video {
+        display: none;
+    }
+}
